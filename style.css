@@ -73,3 +73,18 @@ Destination Cards */
     transform:translateY(-10px);
     transition:0.3s;
 }
+
+/* Mobile Navbar */
+
+@media(max-width:768px){
+
+nav{
+    flex-direction:column;
+}
+
+nav ul{
+    flex-direction:column;
+    text-align:center;
+}
+
+}
