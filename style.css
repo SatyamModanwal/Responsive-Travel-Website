@@ -1,4 +1,4 @@
-*{
+/* *{
     margin:0;
     padding:0;
     b0x-sizing:border-box;
@@ -6,7 +6,7 @@
 
 /* Nav bar Styling */
 
-nav{
+/* nav{
     display: flex;
     justify-content: space-between ;
     align-items:center;
@@ -14,9 +14,9 @@ nav{
     background: #0d6efd;
 }
 nav h2{
-    color:White;
+    color:White; */
 
-}
+/* }
 nav ul{
     display:flex;
     list-style:none;
@@ -30,12 +30,12 @@ nav a{
     color:white;
     text-decorative:none;
 
-}
+} */
 /* 
 Hero Section Styling */
 
-.hero{
-    height:90vh;
+/* .hero{
+    height:20vh;
     display: flex;
     flex-direction: column;
     justify-content:center;
@@ -44,19 +44,19 @@ Hero Section Styling */
     background: url("images/banner.jpg");
     background-size: cover;
     color:white;
-}
+} */
 
 /* Button Styling */
-button{
+/* button{
     padding:12px 25px;
     border:none;
     background:orange;
     color:white;
     cursor:pointer;
-}
+} */
 /* 
 Destination Cards */
-
+/* 
 .destination-container{
     display:flex;
     gap:20px;
@@ -66,17 +66,17 @@ Destination Cards */
 .card{
     width:300px;
     box-shadow:0 0 10px gray;
-}
+} */
 
 /* Hover Effect */
-.card:hover{
+/* .card:hover{
     transform:translateY(-10px);
     transition:0.3s;
-}
+} */
 
 /* Mobile Navbar */
 
-@media(max-width:768px){
+/* @media(max-width:768px){
 
 nav{
     flex-direction:column;
@@ -87,4 +87,190 @@ nav ul{
     text-align:center;
 }
 
+} */
+
+/* Mobile Navbar */
+ /* @media(max-width:768px){    /*"Agar screen ki width 768px ya usse kam ho, to niche wale CSS rules apply karo." */
+
+    /* nav{
+        flex-direction:column;
+    }
+
+    nav ul{
+        flex-direction:column;
+    }
+
+} */ 
+
+/* Destination cards responsive */
+/* 
+@media(max-width:768px){
+
+    .destination-container{
+        flex-direction:column;
+        align-items:center;
+
+    }
+} */
+
+/* Hero Text Responsive */
+/* @media(max-width:768px){
+    .hero h1{
+        font-size:30px;
+    }
+
+    .hero p{
+        font-size: 16px;
+    }
 }
+
+Form Responsive
+
+form{
+    width:100%;
+    max-width:500px;
+} */
+/* 
+Contact Form Responsive */
+/* form{
+    width:100%;
+    max-width:500px;
+    margin:auto;
+}
+
+input,
+textarea{
+    width:100%;
+} */
+
+/* Add Hover Effects */
+/* .card{
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+}
+
+
+ */ 
+
+ /* Navbar css */
+ *{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, sans-serif;
+}
+
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:20px 60px;
+
+    background:#002b5b;
+}
+
+.logo{
+    color:white;
+    font-size:30px;
+    font-weight:bold;
+}
+
+.nav-links{
+    display:flex;
+    list-style:none;
+    gap:30px;
+}
+
+.nav-links a{
+    text-decoration:none;
+    color:white;
+}
+
+.btn{
+    padding:10px 20px;
+    border:none;
+    background:orange;
+    color:white;
+    border-radius:5px;
+}
+
+/* HERO */
+
+.hero{
+    height:90vh;
+
+    background:url("images/hero.jpg");
+
+    background-size:cover;
+    background-position:center;
+
+    display:flex;
+    align-items:center;
+
+    padding-left:100px;
+}
+
+.hero-content{
+    color:white;
+}
+
+.hero h1{
+    font-size:70px;
+}
+
+.hero p{
+    margin:20px 0;
+    font-size:22px;
+}
+
+.hero-btn{
+    padding:15px 30px;
+    border:none;
+    background:orange;
+    color:white;
+}
+
+/* Destinations */
+.destinations{
+    padding:80px;
+}
+
+.destinations h2{
+    text-align:center;
+    margin-bottom:40px;
+}
+
+.cards{
+    display:flex;
+    gap:20px;
+}
+
+.card{
+    flex:1;
+
+    box-shadow:0 0 10px lightgray;
+
+    border-radius:10px;
+
+    overflow:hidden;
+}
+
+.card img{
+    width:100%;
+    height:250px;
+    object-fit:cover;
+}
+
+.card h3{
+    padding:20px;
+}
+
+
+
