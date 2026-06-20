@@ -1,5 +1,10 @@
-/* STEP 3: Navbar CSS */
 
+/* step 13 */
+ html{
+    scroll-behavior:smooth;
+}
+
+/* STEP 3: Navbar CSS */
 *{
     margin:0;
     padding:0;
@@ -108,11 +113,22 @@ Destinations */
     overflow:hidden;
 }
 
+
 .card img{
     width:100%;
     height:250px;
-    object-fit:cover;
+    /* object-fit:cover;isase image cut ho rhai hai  */
+    /*object-fit: contain;isme puri images ko diokhegi but  space back jayega */
+    display: block;
 }
+/* Or   ye bhi use krte skte hai*/
+/* .card img{
+    width:100%;
+    height:auto;
+    display:block;
+    border-radius:10px 10px 0 0;
+} */
+
 
 .card h3{
     padding:20px;
@@ -280,5 +296,40 @@ Gallery images par hover effect lagao */
     flex:1;
 }
 
-/* Make responsive Contact Css */
+/* Make a Footer Section Css */
+footer{
+    background:002b5b;
+    color:black;
+    text-align: center;
+    padding: 30px;
+}
+footer p{
+    margin-top: 10px;
+}
+/* 
+Make Navbar Sticky */
+/* Jab user scroll kare to navbar upar fixed rahe. */
+.navbar{
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
 
+/* Add Smooth Hover Effects */
+/* Destination Cards */
+.card{
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+}
+
+/* Gallery Images */
+.gallery-container img{
+    transition:0.3s;
+}
+
+.gallery-container img:hover{
+    transform:scale(1.05);
+}
