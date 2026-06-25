@@ -1,3 +1,8 @@
+   
+   /* Smooth Scrolling */
+html{
+    scroll-behavior: smooth;
+}
 
 /* step 13 */
  html{
@@ -5,7 +10,7 @@
 }
 
 /* STEP 3: Navbar CSS */
-*{
+/* *{
     margin:0;
     padding:0;
     box-sizing:border-box;
@@ -49,14 +54,76 @@ body{
     color:white;
     border-radius:5px;
 }
+ */
+ *{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+ .navbar{
+    background:#002b5b;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 60px;
+}
+
+/* Navbar Sticky Karo */
+.navbar{
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
 
 
+.logo{
+    color:white;
+    font-size:24px;
+    font-weight:bold;
+}
+
+.logo span{
+    color:orange;
+}
+
+.nav-links{
+    display:flex;
+    list-style:none;
+    gap:40px;
+}
+
+.nav-links a{
+    color:white;
+    text-decoration:none;
+    font-size:16px;
+    transition:0.3s;
+}
+
+.nav-links a:hover{
+    color:orange;
+}
+
+.book-btn{
+    background:#ffa500;
+    color:white;
+    border:none;
+    padding:12px 25px;
+    border-radius:5px;
+    cursor:pointer;
+    font-size: bold;
+}
+/* Hover */
+.book-btn:hover{
+    background: #ff8c00;
+}
 
 /* Hero section */
 .hero{
-    height:200px;
+    height:75vh;
 
-    background:url("images/hero.jpg");
+    background:url("HeroImage.png");
 
     background-size:cover;
     background-position:center;
@@ -65,14 +132,17 @@ body{
     align-items:center;
 
     padding-left:100px;
+    margin-bottom:0;
 }
 
 .hero-content{
     color:white;
+     max-width:600px;
 }
 
 .hero h1{
-    font-size:70px;
+    font-size:65px;
+    line-height:1.1;
 }
 
 .hero p{
@@ -90,7 +160,8 @@ body{
 /* 
 Destinations */
 .destinations{
-    padding:80px;
+    padding-top:40px;
+    margin-top:0;
 }
 
 .destinations h2{
@@ -132,6 +203,15 @@ Destinations */
 
 .card h3{
     padding:20px;
+}
+/* Destination Cards Hover Effect */
+.card{
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 10px 20px rgba(0,0,0,0.2);
 }
 
 
@@ -198,6 +278,14 @@ Destinations */
     box-shadow:0 0 10px rgba(0,0,0,0.1);
 }
 
+/* service box ke flight,tour me css add krna  */
+.service-box i{
+    font-size:50px;
+    color:orange;
+    margin-bottom:15px;
+    display:block;
+}
+
 /* Gallery css */
 .gallery{
     padding:80px;
@@ -248,6 +336,71 @@ Gallery images par hover effect lagao */
     transform:scale(1.05);
 }
 
+
+/* Testimonial Section */
+/* Css Add karo */
+.testimonials{
+    padding:80px;
+    background:#f8f9fa;
+}
+
+.testimonials h2{
+    text-align:center;
+    margin-bottom:40px;
+}
+
+/* Cards Styling */
+.testimonial-container{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    flex-wrap:wrap;
+}
+
+.testimonial-card{
+    width:400px;
+    background:white;
+    padding:25px;
+    border-radius:12px;
+    box-shadow:0 0 15px rgba(0,0,0,0.1);
+}
+
+/* Quote Icon */
+.quote{
+    color:orange;
+    font-size:35px;
+    font-weight:bold;
+}
+/* Client Section */
+.client{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    margin-top:20px;
+}
+
+/* Profile Images */
+.client img{
+    width:50px;
+    height:50px;
+    border-radius:50%;
+    object-fit:cover;
+}
+
+/* Hover Effect */
+.testimonial-card{
+    transition:0.3s;
+}
+
+.testimonial-card:hover{
+    transform:translateY(-8px);
+}
+
+/* Responsive CSS -Testimonial */
+.testimonial-container{
+    flex-direction:column;
+    align-items:center;
+}
 
 
 /* Contact css */
@@ -332,4 +485,76 @@ Make Navbar Sticky */
 
 .gallery-container img:hover{
     transform:scale(1.05);
+}
+
+/* Active Hover Effect on Navbar */
+.nav-links a{
+    tect-decoration:none;
+    color:white;
+    transition:0.3s;
+}
+.nav-links a:hover{
+    color: orange;
+}
+
+/* Smooth Card Hover */
+/* Card thoda upar move karega. */
+.card{
+    transition:0.3s;
+}
+.card:hover{
+    transform:translateY(-10px);
+}
+
+/* Service Card Hover */
+  /* isase service card thoda upar move karega  */
+.service-box{
+    transition:0.3s;
+}
+.service-box:hover{
+    transform:translateY(-10px);
+}
+
+/* Footer CSS */
+footer{
+    background:#002b5b;
+    color:white;
+    text-align:center;
+    padding:40px 20px;
+}
+
+footer h3{
+    font-size:28px;
+    margin-bottom:10px;
+}
+
+footer p{
+    margin:10px 0;
+}
+
+/* Social Icons CSS */
+.social-icons{
+    margin:20px 0;
+}
+
+.social-icons a{
+    color:white;
+    font-size:25px;
+    margin: 0 12px;
+    text-decoration:none;
+    transition:0.3s;
+}
+
+/* Hover Effect */
+.social-icons a:hover{
+    color:orange;
+    transform:translateY(-5px);
+}
+
+/* Footer me ek horizontal line add karo: */
+footer hr{
+    margin:20px auto;
+    width:80%;
+    border:none;
+    border-top:1px solid rgba(255,255,255,0.3);
 }

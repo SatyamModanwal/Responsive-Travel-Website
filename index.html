@@ -5,26 +5,29 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>TravelX</title>
-
 <link rel="stylesheet" href="style.css">
+
+<!-- Font Awesome Add Karo -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
+
       <!-- Navbar Banate Hain -->
        <header>
 
     <nav class="navbar">
 
         <div class="logo">
-            TravelX
+            Travel<span>X</span>
         </div>
 
         <ul class="nav-links">
 
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Destinations</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Gallery</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#destinations">Destinations</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#contact">Contact</a></li>
 
         </ul>
 
@@ -42,7 +45,8 @@
 
     <div class="hero-content">
 
-        <h1>EXPLORE THE WORLD</h1>
+        <h1>EXPLORE 
+            THE WORLD</h1>
 
         <p>
             Travel with us and discover amazing places.
@@ -57,7 +61,11 @@
 </section>
 
 <!-- Popular Destinations -->
- <section class="destinations">
+
+     <!-- <section class="destinations"> -->
+
+    <!-- Add IDs for Navigation -->
+     <section class="destinations" id="destinations">
 
 <h2>Popular Destinations</h2>
 
@@ -92,23 +100,30 @@
 </section>
 
 <!-- Services Section HTML -->
- <section class="services">
+ <!-- <section class="services"> -->
+
+
+<!-- Add IDs for Navigation -->
+ <section class="services" id="services">
 
     <h2>Our Services</h2>
 
     <div class="service-container">
 
         <div class="service-box">
+               <i class="fa-solid fa-hotel"></i>
             <h3>Hotel Booking</h3>
             <p>Best hotels at affordable prices.</p>
         </div>
 
         <div class="service-box">
+    <i class="fa-solid fa-plane"></i>
             <h3>Flight Booking</h3>
             <p>Book flights easily and quickly.</p>
         </div>
 
         <div class="service-box">
+             <i class="fa-solid fa-user-tie"></i>
             <h3>Tour Guide</h3>
             <p>Professional travel guides available.</p>
         </div>
@@ -118,23 +133,73 @@
 </section>
 
 <!-- Travel Gallery Section -->
- <section class="gallery">
+ <!-- <section class="gallery"> -->
+
+
+<!--  Add  id section -->
+  <section class="gallery" id="gallery">
 
     <h2>Travel Gallery</h2>
 
     <div class="gallery-container">
 
-        <img src="images/gallery1.jpg" alt="">
-        <img src="images/gallery2.jpg" alt="">
-        <img src="images/gallery3.jpg" alt="">
-        <img src="images/gallery4.jpg" alt="">
+        <img src="image1.avif" alt="">
+        <img src="image2.jpg" alt="">
+        <img src="image3.jpg" alt="">
+        <img src="image4.jpg" alt="">
+
+    </div>
+
+</section>
+<!-- 
+Testimonials section -->
+<section class="testimonials">
+
+    <h2>What Our Clients Say</h2>
+
+    <div class="testimonial-container">
+
+        <div class="testimonial-card">
+
+            <span class="quote">❝</span>
+
+            <p>
+                Amazing experience! Everything was perfectly planned.
+            </p>
+
+            <div class="client">
+                <img src="Rahul.jpg" alt="Rahul">
+                <h3>Rahul Sharma</h3>
+            </div>
+
+        </div>
+
+        <div class="testimonial-card">
+
+            <span class="quote">❝</span>
+
+            <p>
+                Best travel service. Highly recommended.
+            </p>
+
+            <div class="client">
+                <img src="Harshit.webp" alt="Harshit">
+                <h3>Harshit Verma</h3>
+            </div>
+
+        </div>
 
     </div>
 
 </section>
 
 <!-- Contact Section -->
-<section class="contact">
+<!-- <section class="contact"> -->
+
+    <!-- Add id section -->
+     <section class="contact" id="contact">
+     
+
 
     <h2>Contact Us</h2>
 
@@ -168,20 +233,38 @@
 
   </section>
 
-    <!-- Footer Section -->
-    
- <footer>
-  <h3>TravelX</h3>
+     
+  <!-- Footer Section -->
+ <!-- Footer HTML -->
+  <footer>
+<hr>
+    <h3>TravelX</h3>
 
-  <p>
-    Explore the world with us.We make your journey beautiful and memorable.
-  </p>
-  <p>
-    @2026 TravelX.All Rights Reserved.
-  </p> 
-  
- </footer>      
+    <p>Explore The World With Us</p>
 
+    <div class="social-icons">
+
+        <a href="#">
+            <i class="fa-brands fa-facebook"></i>
+        </a>
+
+        <a href="#">
+            <i class="fa-brands fa-instagram"></i>
+        </a>
+
+        <a href="#">
+            <i class="fa-brands fa-twitter"></i>
+        </a>
+
+        <a href="#">
+            <i class="fa-brands fa-youtube"></i>
+        </a>
+
+    </div>
+
+    <p>© 2025 All Rights Reserved</p>
+
+</footer>
 
   
 </body>
