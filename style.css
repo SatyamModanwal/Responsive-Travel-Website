@@ -5,9 +5,9 @@ html{
 }
 
 /* step 13 */
- html{
+ /* html{
     scroll-behavior:smooth;
-}
+} */
 
 /* STEP 3: Navbar CSS */
 /* *{
@@ -88,6 +88,7 @@ body{
     color:orange;
 }
 
+
 .nav-links{
     display:flex;
     list-style:none;
@@ -119,6 +120,7 @@ body{
     background: #ff8c00;
 }
 
+
 /* Hero section */
 .hero{
     height:75vh;
@@ -133,6 +135,7 @@ body{
 
     padding-left:100px;
     margin-bottom:0;
+    margin-top: 80px;
 }
 
 .hero-content{
@@ -217,7 +220,9 @@ Destinations */
 
  /* Responsive Design */
  @media(max-width:768px){
-
+    .menu-toggle{
+    display:block;
+    }
 .navbar{
     flex-direction:column;
     gap:20px;
@@ -465,6 +470,8 @@ Make Navbar Sticky */
 .navbar{
     position:sticky;
     top:0;
+    left:0;
+    width:100%;
     z-index:1000;
 }
 
@@ -557,4 +564,19 @@ footer hr{
     width:80%;
     border:none;
     border-top:1px solid rgba(255,255,255,0.3);
+}
+
+
+/* js */
+.menu-toggle{
+    display:none;
+    font-size: 30px;
+    color: white;
+    cursor:pointer;
+}
+
+/* Shadow on Scroll (JavaScript) */
+.sticky{
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    transition: 0.3s;
 }
