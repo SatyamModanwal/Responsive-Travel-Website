@@ -1,22 +1,12 @@
-   
-   /* Smooth Scrolling */
+ /* Smooth Scrolling */
 html{
     scroll-behavior: smooth;
 }
 
 /* step 13 */
- /* html{
-    scroll-behavior:smooth;
-} */
-
 /* STEP 3: Navbar CSS */
-/* *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
-
-body{
+/* 
+    body{
     font-family:Arial, sans-serif;
 }
 
@@ -55,15 +45,16 @@ body{
     border-radius:5px;
 }
  */
+ 
  *{
     margin:0;
     padding:0;
     box-sizing:border-box;
 }
 
+
  .navbar{
     background:#002b5b;
-
     display:flex;
     justify-content:space-between;
     align-items:center;
@@ -130,6 +121,7 @@ body{
 
 
 /* Hero section */
+/* hero section styling */
 .hero{
     height:75vh;
 
@@ -143,7 +135,7 @@ body{
 
     padding-left:100px;
     margin-bottom:0;
-    margin-top: 80px;
+    margin-top: 0px;
 }
 
 .hero-content{
@@ -168,8 +160,8 @@ body{
     color:white;
 }
 
-/* 
-Destinations */
+
+/*Destinations */
 .destinations{
     padding-top:40px;
     margin-top:0;
@@ -180,6 +172,7 @@ Destinations */
     margin-bottom:40px;
 }
 
+/* Card CSS */
 .cards{
     display:flex;
     gap:20px;
@@ -187,9 +180,7 @@ Destinations */
 
 .card{
     flex:1;
-
     box-shadow:0 0 10px lightgray;
-
     border-radius:10px;
 
     overflow:hidden;

@@ -1,0 +1,472 @@
+/*    1. GLOBAL VARIABLES & RESET (Base Styling) */
+
+/* Root variables dynamic values ko maintain karne ke liye hote hain (taaki future me color change karna aasan ho) */
+:root {
+    --primary-color: #002b5b;   /* Deep Blue */
+    --accent-color: #ffa500;    /* Orange */
+    --accent-hover: #ff8c00;    /* Darker Orange */
+    --text-dark: #333333;       /* Off-Black for better readability */
+    --bg-light: #f5f5f5;        /* Light Gray for sections */
+    --transition-smooth: all 0.3s ease; /* Smooth transition effect */
+}
+
+/* Global Reset: Saare browsers ki default margin/padding ko zero karne ke liye */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Element ka padding/border total width me include ho */
+}
+
+/* Smooth scrolling pure webpage ke behavior ko professional banata hai click karne par */
+html {
+    scroll-behavior: smooth;
+    font-family: 'Arial', sans-serif;
+    color: var(--text-dark);
+}
+
+/*  2. NAVBAR SECTION  */
+
+.navbar {
+    background: var(--primary-color);
+    display: flex;
+    justify-content: space-between; /* Logo, links aur button ko door-door set karne ke liye */
+    align-items: center;            /* Vertically center align karne ke liye */
+    padding: 15px 60px;
+    position: sticky;               /* Scroll karne par navbar upar hi fix rahega */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;                  /* Takki baaki elements iske upar na scroll hon */
+    transition: var(--transition-smooth);
+}
+
+/* JS ke through add hone wali scroll class (Shadow add karne ke liye) */
+.navbar.sticky {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.logo {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.logo span {
+    color: var(--accent-color); /* Logo ka specific part orange karne ke liye */
+}
+
+.nav-links {
+    display: flex;
+    list-style: none; /* Bullet points hatane ke liye */
+    gap: 40px;        /* Links ke beech ka distance */
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none; /* Underline hatane ke liye */
+    font-size: 16px;
+    transition: var(--transition-smooth);
+}
+
+.nav-links a:hover {
+    color: var(--accent-color); /* Hover karne par text color change */
+}
+
+/* Hamburger menu button for mobile (By default hidden rahega) */
+.menu-toggle {
+    display: none;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+}
+
+/* Common Button Styling */
+.book-btn {
+    background: var(--accent-color);
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold; /* Corrected from font-size: bold */
+    transition: var(--transition-smooth);
+}
+
+.book-btn:hover {
+    background: var(--accent-hover);
+}
+
+/* ==========================================================================
+   3. HERO SECTION
+   ========================================================================== */
+
+.hero {
+    height: 75vh; /* Viewport height ka 75% area cover karega */
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url("Images/HeroImage.png"); /* Image par soft overlay taaki text easily visible ho */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    padding-left: 100px;
+}
+
+.hero-content {
+    color: white;
+    max-width: 600px;
+}
+
+.hero h1 {
+    font-size: 65px;
+    line-height: 1.1;
+}
+
+.hero p {
+    margin: 20px 0;
+    font-size: 22px;
+}
+
+.hero-btn {
+    padding: 15px 30px;
+    border: none;
+    background: var(--accent-color);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: var(--transition-smooth);
+}
+
+.hero-btn:hover {
+    background: var(--accent-hover);
+}
+
+/* ==========================================================================
+   4. DESTINATIONS SECTION
+   ========================================================================== */
+
+.destinations {
+    padding: 80px 60px;
+}
+
+.destinations h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 32px;
+}
+
+.cards {
+    display: flex;
+    gap: 20px;
+}
+
+.card {
+    flex: 1; /* Saare cards equal width ke honge */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden; /* Border-radius ko corners par apply rakhne ke liye image ke upar */
+    transition: var(--transition-smooth);
+    background: white;
+}
+
+/* Professional Card Hover Effect */
+.card:hover {
+    transform: translateY(-10px); /* Card soft treeqe se upar uthega */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover; /* Image bina stretch ya cut hue pure area me professionally scale hogi */
+    display: block;
+}
+
+.card h3 {
+    padding: 20px;
+}
+
+/* ==========================================================================
+   5. SERVICES SECTION
+   ========================================================================== */
+
+.services {
+    padding: 80px 60px;
+    background: var(--bg-light);
+}
+
+.services h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 32px;
+}
+
+.service-container {
+    display: flex;
+    gap: 20px;
+}
+
+.service-box {
+    flex: 1;
+    background: white;
+    padding: 30px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    transition: var(--transition-smooth);
+}
+
+.service-box:hover {
+    transform: translateY(-10px);
+}
+
+.service-box i {
+    font-size: 50px;
+    color: var(--accent-color);
+    margin-bottom: 15px;
+    display: block;
+}
+
+/* ==========================================================================
+   6. GALLERY SECTION
+   ========================================================================== */
+
+.gallery {
+    padding: 80px 60px;
+}
+
+.gallery h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 32px;
+}
+
+.gallery-container {
+    display: grid; /* Grid layout heavy images ko perfectly arrange karne ke liye sabse best h */
+    grid-template-columns: repeat(4, 1fr); /* Equal 4 columns grid */
+    gap: 20px;
+}
+
+.gallery-container img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: var(--transition-smooth);
+}
+
+/* Zoom effect on Hover */
+.gallery-container img:hover {
+    transform: scale(1.05); /* Image smooth zoom in hogi */
+}
+
+/* ==========================================================================
+   7. TESTIMONIALS SECTION
+   ========================================================================== */
+
+.testimonials {
+    padding: 80px 60px;
+    background: var(--bg-light);
+}
+
+.testimonials h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 32px;
+}
+
+.testimonial-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap; /* Cards automatic spaces ke hisab se next line me warp ho ske */
+}
+
+.testimonial-card {
+    width: 380px;
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    transition: var(--transition-smooth);
+}
+
+.testimonial-card:hover {
+    transform: translateY(-8px);
+}
+
+.quote {
+    color: var(--accent-color);
+    font-size: 35px;
+    font-weight: bold;
+    line-height: 1;
+}
+
+.client {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.client img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%; /* Image ko circle card shape dene ke liye */
+    object-fit: cover;
+}
+
+/* ==========================================================================
+   8. CONTACT SECTION
+   ========================================================================== */
+
+.contact {
+    padding: 80px 60px;
+}
+
+.contact h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 32px;
+}
+
+.contact-container {
+    display: flex;
+    gap: 40px;
+}
+
+.contact-form {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 12px; /* Fixed padding for look and feel */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: inherit;
+}
+
+.contact-form textarea {
+    height: 120px; /* Textarea height thodi professional rakhi */
+    resize: vertical; /* User height to stretch kar sake but width kharab na ho */
+}
+
+.contact-form button {
+    padding: 15px;
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: var(--transition-smooth);
+}
+
+.contact-form button:hover {
+    opacity: 0.9;
+}
+
+.contact-info {
+    flex: 1;
+}
+
+/* ==========================================================================
+   9. FOOTER SECTION
+   ========================================================================== */
+
+footer {
+    background: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+footer h3 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+footer p {
+    margin: 10px 0;
+}
+
+.social-icons {
+    margin: 20px 0;
+}
+
+.social-icons a {
+    color: white;
+    font-size: 25px;
+    margin: 0 12px;
+    text-decoration: none;
+    display: inline-block; /* Transform animate tabhi work karta h jb content block ya inline-block ho */
+    transition: var(--transition-smooth);
+}
+
+.social-icons a:hover {
+    color: var(--accent-color);
+    transform: translateY(-5px);
+}
+
+footer hr {
+    margin: 20px auto;
+    width: 80%;
+    border: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* ==========================================================================
+   10. RESPONSIVE DESIGN (Media Queries)
+   ========================================================================== */
+
+/* Saare components ke @media code ko last me ek single block me compress kar diya h */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block; /* Mobile screen pe hamburger button visible ho jayega */
+    }
+
+    .navbar {
+        padding: 15px 20px;
+    }
+
+    .nav-links {
+        display: none; /* JS ke toggle active class lagane se ye responsive banega */
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        gap: 15px;
+    }
+
+    .hero {
+        padding: 20px;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .hero h1 {
+        font-size: 40px;
+    }
+
+    .cards, 
+    .service-container, 
+    .contact-container,
+    .testimonial-container {
+        flex-direction: column; /* Mobile me row templates collapse hokar vertical automatic stack ho jayengi */
+    }
+
+    .gallery-container {
+        grid-template-columns: repeat(2, 1fr); /* Mobile me 4 grid ke bajay side-by-side 2 images show hongi */
+    }
+    
+    .testimonial-card {
+        width: 100%; /* Mobile screen size full width adapt karega */
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery-container {
+        grid-template-columns: 1fr; /* Pure mobile devices me 1 single image grid scale h */
+    }
+}

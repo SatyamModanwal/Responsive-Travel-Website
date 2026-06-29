@@ -7,14 +7,16 @@
   <title>TravelX</title>
 <link rel="stylesheet" href="style.css">
 
-<!-- Font Awesome Add Karo -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+       <!-- Font Awesome Add Karo -->
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+       <!-- Scroll Animation (AOS) -->
+       <link rel="stylesheet"href="https://unpkg.com/aos@2.3.4/dist/aos.css">
 </head>
 <body>
 
       <!-- Navbar Banate Hain -->
        <header>
-
     <nav class="navbar">
 
         <div class="logo">
@@ -47,21 +49,14 @@
 </header>
 
 <!-- Hero Section -->
-<!-- Navbar ke niche add karo -->
- <section class="hero" id="home">
+ <section class="hero" id="home"    
+    data-aos ="fade-up">
 
     <div class="hero-content">
 
-        <h1>EXPLORE 
-            THE WORLD</h1>
-
-        <p>
-            Travel with us and discover amazing places.
-        </p>
-
-        <button class="hero-btn">
-            Discover More
-        </button>
+        <h1>EXPLORE THE WORLD</h1>
+        <p> Travel with us and discover amazing places.</p>
+        <button class="hero-btn">Discover More</button>
 
     </div>
 
@@ -76,35 +71,27 @@
 
 <h2>Popular Destinations</h2>
 
-<div class="cards">
+<div class="cards"
+ data-aos="flip-left"> <!--AOS--> 
 
     <div class="card">
-
         <img src="Images/Paris.jpg">
-
         <h3>Paris</h3>
-
     </div>
 
     <div class="card">
-
         <img src="Images/Dubai.webp">
-
         <h3>Dubai</h3>
-
     </div>
 
     <div class="card">
-
         <img src="Images/Goa.avif">
-
         <h3>Goa</h3>
-
     </div>
 
 </div>
-
 </section>
+
 
 <!-- Services Section HTML -->
  <!-- <section class="services"> -->
@@ -117,26 +104,30 @@
 
     <div class="service-container">
 
-        <div class="service-box">
-               <i class="fa-solid fa-hotel"></i>
+        <div class="service-box"
+        data-aos="zoom-in">   <!--  AOS -->
+
+            <i class="fa-solid fa-hotel"></i>
             <h3>Hotel Booking</h3>
             <p>Best hotels at affordable prices.</p>
         </div>
 
-        <div class="service-box">
-    <i class="fa-solid fa-plane"></i>
+        <div class="service-box"
+          data-aos="zoom-in"> 
+
+             <i class="fa-solid fa-plane"></i>
             <h3>Flight Booking</h3>
             <p>Book flights easily and quickly.</p>
         </div>
 
-        <div class="service-box">
+        <div class="service-box"
+         data-aos="zoom-in">
              <i class="fa-solid fa-user-tie"></i>
             <h3>Tour Guide</h3>
             <p>Professional travel guides available.</p>
         </div>
 
     </div>
-
 </section>
 
 <!-- Travel Gallery Section -->
@@ -144,7 +135,8 @@
 
 
 <!--  Add  id section -->
-  <section class="gallery" id="gallery">
+  <section class="gallery" id="gallery"
+  data-aos="fade-left">
 
     <h2>Travel Gallery</h2>
 
@@ -158,9 +150,11 @@
     </div>
 
 </section>
-<!-- 
-Testimonials section -->
- <section class="testimonials">
+
+
+<!-- Testimonials section -->
+ <section class="testimonials"
+    data-aos="zomm-in-up">
 
     <h2>What Our Clients Say</h2>
 
@@ -170,10 +164,7 @@ Testimonials section -->
 
             <span class="quote">❝</span>
 
-            <p>
-                Amazing experience! Everything was perfectly planned.
-            </p>
-
+            <p> Amazing experience! Everything was perfectly planned.</p>
             <div class="client">
                 <img src="Rahul.jpg" alt="Rahul">
                 <h3>Rahul Sharma</h3>
@@ -185,9 +176,7 @@ Testimonials section -->
 
             <span class="quote">❝</span>
 
-            <p>
-                Best travel service. Highly recommended.
-            </p>
+            <p>Best travel service. Highly recommended.</p>
 
             <div class="client">
                 <img src="Harshit.webp" alt="Harshit">
@@ -204,7 +193,8 @@ Testimonials section -->
 <!-- <section class="contact"> -->
 
     <!-- Add id section -->
-     <section class="contact" id="contact">
+     <section class="contact" id="contact"
+     data-aos="fade-up">
      
 
 
@@ -229,9 +219,7 @@ Testimonials section -->
             <!-- <h3>Get In Touch</h3> -->
 
             <p>📍 New Delhi, India</p>
-
             <p>📞 +91 8115508879</p>
-
             <p>✉️ travelx@gmail.com</p>
 
         </div>
@@ -243,7 +231,7 @@ Testimonials section -->
      
   <!-- Footer Section -->
  <!-- Footer HTML -->
-  <footer>
+  <footer data-aos="fade-up">
 <hr>
     <h3>TravelX</h3>
 
@@ -273,6 +261,17 @@ Testimonials section -->
 
 </footer>
 
+
+<!-- AOS - Animation On Scroll -->
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+<script>
+AOS.init({
+    duration:1000,
+    once:true
+});
+</script>
 <script src="script.js"></script>  
+
 </body>
 </html>
